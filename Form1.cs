@@ -31,15 +31,15 @@ namespace CCH
 
             if (comboBTC.Text == "P2PKH")
             {
-                re = new Regex("^[1][a-zA-Z0-9]{26,35}$");
+                re = new Regex("^[1][a-zA-Z0-9][^0OIl]{26,35}$");
             }
             else if (comboBTC.Text == "P2SH")
             {
-                re = new Regex("^[3][a-zA-Z0-9]{26,35}$");
+                re = new Regex("^[3][a-zA-Z0-9][^0OIl]{26,35}$");
             }
             else if (comboBTC.Text == "Bech32")
             {
-                re = new Regex("^(bc1)([a-z0-9]){38,62}$");
+                re = new Regex("^(bc1)[a-z0-9][^1bio]{38,62}$");
             }
             return re;
         }
